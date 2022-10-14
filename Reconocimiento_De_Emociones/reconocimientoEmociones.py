@@ -5,8 +5,8 @@ import numpy as np
 """Module for emotion recognition in VideoRealtime."""
 
 # Method used for training and read the model
-method = 'EigenFaces'
-# method = 'FisherFaces'
+# method = 'EigenFaces'
+method = 'FisherFaces'
 # method = 'LBPH'
 
 dataPath = 'C:/Users/angel/Desktop/Semestre/Inteligencia Artificial/Tareas/IA/Reconocimiento_De_Emociones/Data'  # Path to data
@@ -86,9 +86,6 @@ def main():
         cv2.imshow('nFrame', nFrame)
         k = cv2.waitKey(1)
         if k == 27:
-            break
-        # Press Q on keyboard to  exit
-        if cv2.waitKey(25) & 0xFF == ord('q'):
             break
 
     cap.release()

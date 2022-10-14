@@ -10,6 +10,7 @@ LBPH
 Training ( LBPH )...
 Training time ( LBPH ):  0.23653078079223633
 
+---------------------------------------**-----------------------------------------------------------
 Con dataset de 200 imagenes, 40 por emocion
 Emotions List:  ['Enojo', 'Felicidad', 'Neutral', 'Sorpresa', 'Tristeza']
 EigenFaces
@@ -22,17 +23,91 @@ LBPH
 Training ( LBPH )...
 Training time ( LBPH ):  0.42902135848999023
 
+---------------------------------------**-----------------------------------------------------------
+Con dataset de 1000 imagenes, 100 por emocion
+Emotions List:  ['Enojo', 'Felicidad', 'Neutral', 'Sorpresa', 'Tristeza']
+EigenFaces
+Training ( EigenFaces )...
+Training time ( EigenFaces ):  17.935455560684204
+FisherFaces
+Training ( FisherFaces )...
+Training time ( FisherFaces ):  9.168715953826904
+LBPH
+Training ( LBPH )...
+Training time ( LBPH ):  0.899848461151123
+
+Resultado FisherFace es mas preciso, comentario: le cuesta detectar tristeza
+
+---------------------------------------**-----------------------------------------------------------
+Con dataset de 2500 imagenes, 500 por emocion
+Emotions List:  ['Enojo', 'Felicidad', 'Neutral', 'Sorpresa', 'Tristeza']
+EigenFaces
+Training ( EigenFaces )...
+Training time ( EigenFaces ):  1411.1160941123962
+FisherFaces
+Training ( FisherFaces )...
+Training time ( FisherFaces ):  1399.6227226257324
+LBPH
+Training ( LBPH )...
+Training time ( LBPH ):  4.920681715011597
+
+Resultado FisherFace es mas preciso, comentario: Neutral cuesta que lo detecte
+
+---------------------------------------**-----------------------------------------------------------
 Con dataset de 5000 imagenes, 1000 por emocion
 Emotions List:  ['Enojo', 'Felicidad', 'Neutral', 'Sorpresa', 'Tristeza']
 EigenFaces
 Training ( EigenFaces )...
-Training time ( EigenFaces ):  12249.905680418015 = 3 horas 25 min
+Training time ( EigenFaces ):  12249.905680418015 = 3 horas 25 min aproximadamente
 FisherFaces
 Training ( FisherFaces )...
-Training time ( FisherFaces ):  14334.773435592651
+Training time ( FisherFaces ):  14334.773435592651 = 4 horas aproximadamente
 LBPH
 Training ( LBPH )...
 Training time ( LBPH ):  10.117603302001953
 
+Resultado FisherFace es mas preciso, comentario: cambia masomenos y le cuesta detectar neutral y enojado
+
+---------------------------------------**-----------------------------------------------------------
 Con dataset de 10000 imagenes, 2000 por emocion
 
+-------------------------------+  Optimizar  +-----------------------------------------------------
+
+---------------------------------------**-----------------------------------------------------------
+Con dataset optimizado de 2450 imagenes
+Emotions List:  ['Enojo', 'Felicidad', 'Neutral', 'Sorpresa', 'Tristeza']
+EigenFaces
+Training ( EigenFaces )...
+Training time ( EigenFaces ):  1380.274751663208
+FisherFaces
+Training ( FisherFaces )...
+Training time ( FisherFaces ):  1481.0747003555298
+LBPH
+Training ( LBPH )...
+Training time ( LBPH ):  5.300203084945679
+
+Resultado FisherFace es mas preciso, comentario: No es muy preciso con poca iluminacion
+
+---------------------------------------**-----------------------------------------------------------
+Con dataset optimizado de 1750
+Emotions List:  ['Enojo', 'Felicidad', 'Neutral', 'Sorpresa', 'Tristeza']
+EigenFaces
+Training ( EigenFaces )...
+Training time ( EigenFaces ):  419.7168233394623
+FisherFaces
+Training ( FisherFaces )...
+Training time ( FisherFaces ):  389.6662940979004
+LBPH
+Training ( LBPH )...
+Training time ( LBPH ):  3.4321022033691406
+
+Resultado FisherFace es mas preciso, comentario: cuesta detectar felicidad
+
+-----------------------------* El mejor resultado es *--------------------------------
+Con dataset de 2500 imagenes, 500 por emocion
+
+FisherFaces
+Training ( FisherFaces )...
+Training time ( FisherFaces ):  1399.6227226257324 = 23 min aproximadamente
+
+Resultado FisherFace es mas preciso, comentario: Neutral cuesta que lo detecte

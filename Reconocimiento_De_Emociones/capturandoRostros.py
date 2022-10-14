@@ -53,9 +53,6 @@ def captureVideoRealtime():
         k = cv2.waitKey(1)
         if k == 27 or count >= 200:
             break
-        # Press Q on keyboard to  exit
-        if cv2.waitKey(25) & 0xFF == ord('q'):
-            break
 
     cap.release()
     cv2.destroyAllWindows()
@@ -101,9 +98,6 @@ def captureVideos(i):
             k = cv2.waitKey(1)
             if k == 27 or count >= count2:
                 count2 += contImagesToSave
-                break
-            # Press Q on keyboard to  exit
-            if cv2.waitKey(25) & 0xFF == ord('q'):
                 break
         cap.release()
         cv2.destroyAllWindows()
