@@ -13,6 +13,10 @@ dataPath = 'C:/Users/angel/Desktop/Semestre/Inteligencia Artificial/Tareas/IA/Re
 
 
 def main():
+    """
+    Main function for capture video and detect emotion
+    Its necesary has 5 carpet in Reconocimiento_De_Emociones/Data/ with ['Enojo', 'Felicidad', 'Neutral', 'Tristeza', 'Sorpresa']
+    """
     if method == 'EigenFaces': emotion_recognizer = cv2.face.EigenFaceRecognizer_create()
     if method == 'FisherFaces': emotion_recognizer = cv2.face.FisherFaceRecognizer_create()
     if method == 'LBPH': emotion_recognizer = cv2.face.LBPHFaceRecognizer_create()
