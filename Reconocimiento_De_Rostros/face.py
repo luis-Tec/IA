@@ -3,19 +3,16 @@ import cv2
 import pickle
 
 # Loading the facecascader
-face_cascade=cv2.CascadeClassifier('cascades/data/haarcascade_frontalface_alt2.xml')
-
-#loading the eye cascader
-eye_cascade=cv2.CascadeClassifier('cascades/data/haarcascade_eye.xml')
+face_cascade=cv2.CascadeClassifier('C:/Users/carlo/Documents/opencv-4.6.0/data/haarcascades/haarcascade_frontalface_alt2.xml')
 
 # Loading the recognizer
 recognizer=cv2.face.LBPHFaceRecognizer_create()
-recognizer.read('face-trainner.yml')
+recognizer.read('Reconocimiento_De_Rostros/face-trainner.yml')
 
 labels={}
 
 # Loading the labels from pickle file
-with open("face-labels.pickle","rb") as f:
+with open("Reconocimiento_De_Rostros/face-labels.pickle","rb") as f:
     og_labels=pickle.load(f)
     labels={v:k for k,v in og_labels.items()}
 
@@ -54,9 +51,6 @@ while(True):
         stroke=2
         cv2.rectangle(frame,(x,y),(x+w,y+h),color,stroke)
 
-        eyes=eye_cascade.detectMultiScale(roi_gray)
-        for (ex,ey,ew,eh) in eyes:
-            cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
 
     # Displaying the resulting frame
     cv2.imshow('frame',frame)
