@@ -1,0 +1,38 @@
+Con dataset de 100 imagenes, 20 por emocion
+Emotions List:  ['Enojo', 'Felicidad', 'Neutral', 'Sorpresa', 'Tristeza']
+EigenFaces
+Training ( EigenFaces )...
+Training time ( EigenFaces ):  0.5471365451812744
+FisherFaces
+Training ( FisherFaces )...
+Training time ( FisherFaces ):  0.4250047206878662
+LBPH
+Training ( LBPH )...
+Training time ( LBPH ):  0.23653078079223633
+
+Con dataset de 200 imagenes, 40 por emocion
+Emotions List:  ['Enojo', 'Felicidad', 'Neutral', 'Sorpresa', 'Tristeza']
+EigenFaces
+Training ( EigenFaces )...
+Training time ( EigenFaces ):  2.461851119995117
+FisherFaces
+Training ( FisherFaces )...
+Training time ( FisherFaces ):  1.5653002262115479
+LBPH
+Training ( LBPH )...
+Training time ( LBPH ):  0.42902135848999023
+
+Con dataset de 5000 imagenes, 1000 por emocion
+Emotions List:  ['Enojo', 'Felicidad', 'Neutral', 'Sorpresa', 'Tristeza']
+EigenFaces
+Training ( EigenFaces )...
+Training time ( EigenFaces ):  12249.905680418015 = 3 horas 25 min
+FisherFaces
+Training ( FisherFaces )...
+Training time ( FisherFaces ):  14334.773435592651
+LBPH
+Training ( LBPH )...
+Training time ( LBPH ):  10.117603302001953
+
+Con dataset de 10000 imagenes, 2000 por emocion
+
