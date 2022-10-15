@@ -1,8 +1,8 @@
 # Modelos de reconocimiento
 
 
-## Reconocimiento De emociones
+## Reconocimiento De Emociones(Fisherface)
     
 ## Reconocimiento De Personas(EigenFaces)
 
-## Reconocimiento De Rostros
+## Reconocimiento De Rostros(LBPH)
