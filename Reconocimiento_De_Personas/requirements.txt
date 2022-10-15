@@ -1,0 +1,3 @@
+python -m pip install --user opencv-contrib-python
+python -m pip install numpy
+python -m pip install imutils
