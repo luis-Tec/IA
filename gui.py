@@ -11,7 +11,7 @@ from datetime import datetime
 faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades +
                                     "haarcascade_frontalface_default.xml")
 # Main Path // ** Its necessary configure **
-urlMain = 'C:/Users/angel/Desktop/Semestre/Inteligencia Artificial/Tareas/IA/'
+urlMain = 'C:/Users/Luis/Documents/GitHub/IA/'
 
 """   Load models data   """
 # var for reports
@@ -21,11 +21,10 @@ inFrame = []
 timeFace = []
 
 # person_recognition
-# dataPath = urlMain + 'Reconocimiento_De_Personas/Dataset/Training/Personas(light) - 150px'
-# imagePathsPerson = os.listdir(dataPath)
-imagePathsPerson = ["", ""]
+dataPath = urlMain + 'Reconocimiento_De_Personas/Dataset/Training/Personas(light) - 150px'
+imagePathsPerson = os.listdir(dataPath)
 face_recognizer = cv2.face.EigenFaceRecognizer_create()
-# face_recognizer.read(urlMain + 'Reconocimiento_De_Personas/EigenFaceCustomModel(light-150px).xml')
+face_recognizer.read(urlMain + 'Reconocimiento_De_Personas/EigenFaceCustomModel(light-150px).xml')
 
 # facial_recognition
 recognizer = cv2.face.LBPHFaceRecognizer_create()
@@ -45,7 +44,7 @@ emotion_recognizer.read(
     urlMain + 'Reconocimiento_De_Emociones/modelFisherFaces.xml'
 )
 imagePathsEmotion = os.listdir(
-    urlMain + 'Reconocimiento_De_Emociones/Data')
+    urlMain + 'Reconocimiento_De_Emociones/Dataset')
 
 
 # functions
@@ -120,6 +119,7 @@ def load_model(frame):
 
 
 def person_recognition(frame):
+    global inFrame
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     auxFrame = gray.copy()
     faces = faceClassif.detectMultiScale(gray, 1.3, 5)
@@ -146,7 +146,8 @@ def person_recognition(frame):
             cv2.putText(frame, 'Unknown', (x, y - 20), 2, 0.8, (0, 0, 255), 1,
                         cv2.LINE_AA)
             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 0, 255), 2)
-
+    addReports(reportsFrame)
+    inFrame = reportsFrame.copy()
     return frame
 
 
